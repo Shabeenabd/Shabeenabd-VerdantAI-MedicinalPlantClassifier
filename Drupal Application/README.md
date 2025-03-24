@@ -1,9 +1,9 @@
 # Ayurmithram 
 ### Drupal web Home page
-![alt text](Scraper/Artifacts/Screenshot_from_2024-12-27_15-07-53.png)
-![alt text](Scraper/Artifacts/Screenshot_from_2024-12-27_15-08-07.png)
+![alt text](Images/Screenshot_from_2024-12-27_15-07-53.png)
+![alt text](Images/Screenshot_from_2024-12-27_15-08-07.png)
 ### Drupal Plant Scan page
-![alt text](Scraper/Artifacts/Screenshot_from_2024-12-27_15-10-31.png)
+![alt text](Images/Screenshot_from_2024-12-27_15-10-31.png)
 
 
 <img alt="Drupal Logo" src="https://www.drupal.org/files/Wordmark_blue_RGB.png" height="60px">
