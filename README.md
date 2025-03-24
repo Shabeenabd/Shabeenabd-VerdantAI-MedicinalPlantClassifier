@@ -133,6 +133,8 @@ your-repository/
 │   ├── downloader.py
 │   └── data_collector.py    # Image scraper. 
 │
+├── Images
+│
 ├── requirements.txt         # Main Python dependencies for the entire project
 │
 └── README.md                # This README file
