@@ -1,0 +1,14 @@
+{
+  "appId": "com.example.app",
+  "appName": "Medicinal Plants Mobile App",
+  "webDir": "dist",
+  "server": {
+    "url": "https://192.168.8.118/medicinal_plants/",
+    "cleartext": true
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchAutoHide": false
+    }
+  }
+}
