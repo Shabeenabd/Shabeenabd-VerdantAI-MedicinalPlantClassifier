@@ -17,6 +17,6 @@ This is a **web scraper** designed to **download images** quickly for training *
 cd Scraper
 python data_collector.py
 ```
-![alt text](Artifacts/Screenshot_from_2024-12-27_12-59-25.png)
+![alt text](../Images/Screenshot_from_2024-12-27_12-59-25.png)
 
 3. Images will be saved to the Dataset folder, ready to be used for training your image classification model.
