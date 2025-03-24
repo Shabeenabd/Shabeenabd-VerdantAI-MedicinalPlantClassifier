@@ -1,0 +1,71 @@
+<div class="topbar">
+  	<div class="container">
+	 	<div class="row">
+			<div class="col-12">
+		  		<div class="topbar-content"> 
+				 	{% if page.topbar_information %}
+						<div class="topbar-left">
+					  		{{ page.topbar_information }}  
+						</div>                                              
+				 	{% endif %}
+			 
+				 	<div class="topbar-right">
+						
+						{% if gva_theme_setting('link_btn_header') is not empty %}
+					  		<div class="topbar-button">
+								<a href="{{ gva_theme_setting('link_btn_header') }}" class="btn-header">
+							  		<i aria-hidden="true" class="fi flaticon-plus"></i>
+									{{ gva_theme_setting('text_btn_header')|t }}
+								</a>
+					  		</div>
+						{% endif %}
+
+						<div class="gva-user-region user-region">
+						 	<span class="icon">
+								{% if user_picture_url %}
+							  		<img src="{{ user_picture_url }}" alt=""/>
+								{% else %}  
+							  		<i class="fa fa-user"></i>
+								{% endif %}
+						 	</span>
+						 	<div class="user-content">  
+								{% if custom_account %}
+								  <div class="account-message">{{ custom_account|raw }}</div>
+								{% endif %}  
+								<ul class="user-links">
+								  	{% if custom_account %}
+								  		{% if gva_theme_setting('link_btn_header') is not empty %}
+									 		<li><a href="{{ gva_theme_setting('link_btn_header') }} ">{{ gva_theme_setting('text_btn_header')|t }}</a></li>
+									 	{% endif %}
+									 	<li><a href="{{ path('user.page') }}">{{ 'My Account'|t }}</a></li>
+									 	<li><a href="{{ path('user.logout') }}">{{ 'Logout'|t }}</a></li>
+								  	{% else %}
+									 	<li><a href="{{ path('user.login') }}">{{ 'Login'|t }}</a></li>
+									 	<li><a href="{{ path('user.register') }}">{{ 'Register'|t }}</a></li>
+								  	{% endif %}  
+								</ul>
+						 	</div>  
+					  	</div>
+
+						{% if page.search %}
+						  	<div class="gva-search-region search-region">
+							 	<span class="icon"><i class="gv-icon-52"></i></span>
+							 	<div class="search-content">  
+									{{ page.search }}
+							 	</div>  
+						  	</div>
+						{% endif %} 
+
+						{% if page.cart %}
+		              <div class="gva-cart-region cart-region">                                    
+		                  {{ page.cart }}                                  
+		              </div>
+		            {% endif %}
+
+				 	</div>
+
+		  		</div>
+			</div>
+	 	</div>
+  	</div> 
+</div>

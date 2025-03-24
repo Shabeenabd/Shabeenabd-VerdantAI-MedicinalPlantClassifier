@@ -1,0 +1,20 @@
+@import "../bootstrap/functions";
+@import "../bootstrap/variables";
+ 
+// images folder path of theme 
+$base-theme-image-path : '../images'!default;
+
+//------- FONTS
+$fa-font-path							: "../fonts/" !default;
+$font-icon 								: "FontAwesome"!default;
+$font-icon-2                     : "gva-icon"!default;
+//-------- COLOR --------------
+$black 			 					   : #000 !default; 
+$white                           : #fff !default;  
+$nocolor                         : transparent !default;
+//--------- COLORS  
+$theme-color                      : var(--#{$variable-prefix}theme-color) !default;
+$theme-color-second               : var(--#{$variable-prefix}theme-color-second) !default;
+$theme-color-three                : var(--#{$variable-prefix}theme-color-three) !default;
+$border-color-dark                : rgba(255, 255, 255, 0.1)!default;
+$border-color                     : rgba(0, 0, 0, 0.1)!default;    

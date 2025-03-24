@@ -1,0 +1,24 @@
+.gsc-icon-list{
+	@include media-breakpoint-down(xs){
+		margin-bottom: 50px;
+	}
+	li {
+		display: -webkit-box;
+	    display: -ms-flexbox;
+	    display: flex;
+	    -webkit-box-align: start;
+	    -ms-flex-align: start;
+	    align-items: flex-start;
+	    + li{
+	    	padding-top: 20px;
+	    }
+	}
+	i{
+		color: $theme-color;
+    	font-size: 20px;
+    	padding-right: 12px;
+	}
+	span{
+		line-height: 18px;
+	}
+}

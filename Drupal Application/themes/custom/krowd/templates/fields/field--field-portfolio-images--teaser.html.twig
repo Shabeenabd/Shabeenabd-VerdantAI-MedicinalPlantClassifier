@@ -1,0 +1,12 @@
+{% set i = 0 %}
+<div{{ attributes }}>
+  {%- for item in items -%}
+    {% set i = i + 1 %}
+      {% if i == 1 %}
+        <div class="image-item">
+          {{ item.content }}
+        </div>
+      {% endif %}
+  {%- endfor -%}
+</div>
+

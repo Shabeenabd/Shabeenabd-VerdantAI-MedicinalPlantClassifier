@@ -1,0 +1,39 @@
+name: Krowd Sub Theme
+type: theme
+description: 'A flexible, recolorable theme with many regions and a responsive, mobile-first layout.'
+package: gaviasthemes
+base theme: krowd
+libraries:
+  - krowd_sub/global-styling
+
+regions:
+  offcanvas: 'After Offcanvas'
+  topbar_social: "Topbar Social"
+  topbar_menu: "User Menu"
+  topbar_information: "Topbar Information"
+  branding: 'Branding'
+  cart: 'Cart'
+  search: 'Search'
+  header_right: "Header Right"
+  breadcrumbs: 'Breadcrumbs'
+  help: 'Help'
+  main_menu: 'Main menu'
+  content_top: 'Content Top'
+  content: 'Main content'
+  content_bottom: 'Content Bottom'
+  sidebar_left: 'Sidebar Left'
+  sidebar_right: 'Sidebar Right'
+  highlighted: 'Highlighted'
+  before_footer: 'Before Footer'
+  footer_first: 'Footer First'
+  footer_second: 'Footer Second'
+  footer_third: 'Footer Third'
+  footer_four: 'Footer Four'
+  after_footer: 'After Footer'
+  copyright: 'Copyright'
+  user_content: 'User Content (using for user page)'
+  other: 'Other'
+
+version: '1.0.0'
+core_version_requirement: ^8.8 || ^9 || ^10
+project: 'drupal'

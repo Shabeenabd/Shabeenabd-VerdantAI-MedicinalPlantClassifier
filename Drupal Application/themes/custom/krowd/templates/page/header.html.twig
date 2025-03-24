@@ -1,0 +1,64 @@
+<header id="header" class="header-default header-v">
+    
+  {% set class_sticky = '' %}
+  {% if sticky_menu == 1 %}
+    {% set class_sticky = 'gv-sticky-menu' %}
+  {% endif %}  
+
+  {% include '@krowd/page/parts/topbar.html.twig' %}
+
+  <div class="header-main">
+    <div class=" header-content-layout {{ class_sticky }}">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="header-main-inner p-relative">         
+              <div class="header-inner clearfix"> 
+                
+                {% if page.branding %}
+                  <div class="branding">                    
+                    {{ page.branding }}                    
+                  </div>
+                {% endif %}
+
+                <div class="main-menu">
+                  <div class="area-main-menu">
+                    <div class="area-inner">
+                        <div class="header-menu">
+                          <div class="gva-offcanvas-mobile">
+                            <div class="close-offcanvas d-none"><i class="gv-icon-8"></i></div>
+                            <div class="main-menu-inner">
+                              {% if page.main_menu %}
+                                {{ page.main_menu }}
+                              {% endif %}
+                            </div>
+                            {% if page.offcanvas %}
+                              <div class="after-offcanvas d-none">
+                                {{ page.offcanvas }}
+                              </div>
+                            {% endif %}                             
+                          </div>
+                          
+                          <div id="menu-bar" class="menu-bar">
+                            <span class="one"></span>
+                            <span class="two"></span>
+                            <span class="three"></span>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </div> 
+                {% if page.header_right %}
+                  <div class="header-right">   
+                    {{ page.header_right }}
+                  </div>
+                {% endif %}
+              </div>  
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div>      
+  </div>
+
+</header>

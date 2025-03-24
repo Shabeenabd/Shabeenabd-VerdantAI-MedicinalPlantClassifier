@@ -1,0 +1,66 @@
+
+.gsc-map{
+  position: relative;
+  &.style-1{
+    margin-bottom: -10px;
+    iframe{
+      width: 100%!important;
+      pointer-events: none;
+    }
+    .info-inner{
+      padding: 45px 30px;
+      position: absolute;
+      top: 100px;
+      bottom: 100px;
+      left: 20%;
+      width: 375px;
+      z-index: 99;
+      background: $white;
+      @include media-breakpoint-down(md){
+        left: 15%;
+      }
+      @include media-breakpoint-down(sm){
+        position: static;
+      }
+      .info-item{
+        margin-bottom: 15px;
+      }
+    }
+  }
+  &.style-2{
+    margin-top: 100px;
+    @include media-breakpoint-down(sm){
+      margin-top: 30px;
+    }
+    .info-inner{
+      padding: 60px 75px 60px 35px;
+      position: absolute;
+      top: -70px;
+      bottom: -70px;
+      width: 360px;
+      z-index: 99;
+      border: 5px solid $theme-color;
+      z-index: 9;
+      @include media-breakpoint-down(sm){
+        margin: 20px 0;
+        position: static;
+        width: 100%;
+        float: left;
+      }  
+    }
+    .map-content{
+      position: relative;
+      z-index: 99;
+      width: 65%;
+      float: right;
+      @include media-breakpoint-down(sm){
+        position: static;
+        width: 100%;
+      } 
+      iframe{
+        width: 100%;
+        pointer-events: none;
+      }
+    }
+  }  
+}

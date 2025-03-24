@@ -1,0 +1,7 @@
+image_upload_api.form:
+  path: '/scan-the-plant'
+  defaults:
+    _form: '\Drupal\image_upload_api\Form\ImageUploadForm'
+    _title: 'Scan the Plant'
+  requirements:
+    _permission: 'access content'

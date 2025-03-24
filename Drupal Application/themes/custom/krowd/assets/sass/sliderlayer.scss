@@ -1,0 +1,224 @@
+@import "vars/_theme_variables";
+
+@import "bootstrap/mixins";
+@import "mixins/mixins";
+@import "mixins/template";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+#gavias_slider_single{
+  font-family: $font-family-base; 
+}
+.gavias_sliderlayer{
+   background: #f5f5f5!important;
+}
+.layer-style-image{
+  display: inline-block;
+  text-align: center;
+  img{
+    max-width: 100%!important;
+    height: auto!important;
+  } 
+}
+.gavias_sliderlayer, #gavias_slider_single{
+  font-family: $font-family-base;
+  .tp-bullets{
+    -webkit-opacity: 1!important;
+    -ms-opacity: 1!important;
+    -o-opacity: 1!important;
+    opacity: 1!important;
+    visibility: visible!important;
+    margin-left: -40px;
+    .tp-bullet{
+      @include size(8px, 8px); 
+      @include border-radius(8px);
+      background: rgba(255, 255, 255, 0.2);
+      &.selected{
+        background: $white;
+      }
+    }
+  }
+  .tparrows{
+    @include size(80px, 80px);
+    background: #ccced4!important;
+    line-height: 80px;
+    color: $theme-color-three;
+    font-size: 18px;
+    position: relative;
+    @include media-breakpoint-down(md){
+      @include size(50px, 50px);
+      line-height: 50px;
+    }
+    &:before{
+      color: $theme-color-three!important;
+      font-size: 18px;
+      line-height: inherit;
+    }
+    &:after{
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 13px;
+      width: 13px;
+      z-index: 1;
+      background: $theme-color;
+      opacity: 0;
+      @include transition(all 0.35s);
+      @include media-breakpoint-down(md){
+        height: 8px;
+        width: 8px;
+      }
+    }
+    &:hover {
+      background: $white!important;
+      color: $theme-color-three!important;
+      &:after{
+        opacity: 1;
+      }
+      &:before{
+        color: $theme-color-three!important;
+      }
+    }
+  }
+  
+  .tp-caption{
+    z-index: 99;
+    line-height: 28px;
+    color: $black;
+    @media (max-width: 1199px){
+      padding: 0 15px!important;
+    }
+  }
+
+  .slide-style-1{
+    position: relative;
+  }
+  .slide-style-2{
+    font-weight: 500; 
+    font-family: $font-family-base;
+    border-bottom: 1px solid rgba($white, 0.3);
+    display: inline-block;
+  }
+  .slide-style-3{
+    font-family: $headings-font-family;
+    font-weight: 900;
+  }
+  .slide-style-4{
+    font-family: $headings-font-family;
+    font-size: 40px;
+    font-weight: 700;
+  }
+ 
+  .text-black{
+    color: $black!important;
+  }
+
+  .text-theme{
+    color: $theme-color!important;
+  }
+  
+  .text-second {
+    color: $theme-color-second!important;
+  }
+  .text-white{
+    color: $white!important;
+  }
+
+  .text-center{
+    text-align: center;
+  }
+
+  .text-left{
+    text-align: left;
+  }
+
+  .inner.btn-slide, .btn-slide a{
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: none;
+    background: $theme-color-second;
+    color: $theme-color-three;
+    font-family: $font-family-base;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 22px 38px;
+    position: relative;
+    display: inline-block;
+    @include transition(all 0.35s);
+    border: none;
+    @include media-breakpoint-down(md){
+      padding: 10px 20px;
+      font-size: 12px;
+      letter-spacing: 0; 
+    }
+    span{
+      position: relative;
+      z-index: 9;
+    }
+    &:after{
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 13px;
+      width: 13px;
+      z-index: 1;
+      background: $theme-color-three;
+      @include transition(all 0.35s);
+      @include media-breakpoint-down(md){
+        height: 8px;
+        width: 8px;
+      }
+    }
+    &:hover, &:focus, &:active, &.active{
+      color: $white;
+      &:after{
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  .inner.btn-slide-white, .btn-slide-white a{
+    font-size: 16px;
+    text-transform: none;
+    background: $white;
+    color: $black;
+    font-family: $headings-font-family;
+    font-weight: 400;
+    padding: 0 20px 0 25px;
+    line-height: 40px;
+    position: relative;
+    display: inline-block;
+    @include transition(all 0.35s);
+    border: none;
+    &:after{
+      content: "";
+      position: absolute;
+      left: -1px;
+      top: 0;
+      height: 100%;
+      width: 15px;
+      z-index: 1;
+      background: url('#{$base-theme-image-path}/btn-arrow.png') no-repeat left center $nocolor;
+    }
+    &:hover, &:focus, &:active, &.active{
+      color: $black;
+      opacity: 0.9;
+    }
+  }
+
+  .gavias-overlay{
+    &:after{
+      content: "";
+      background: url(#{$base-theme-image-path}grid-slide.png) repeat rgba(0, 0, 0, 0.3);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+  }
+}   

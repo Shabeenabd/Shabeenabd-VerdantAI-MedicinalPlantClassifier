@@ -1,0 +1,965 @@
+.campaign-block{
+   margin-bottom: 30px;
+   .image{
+      position: relative;
+      text-align: center; 
+      .icon-expand{
+         position: absolute;
+         top: 15px;
+         right: 50px;
+         width: 32px;
+         height: 32px;
+         line-height: 35px;
+         border-radius: 50%;
+         color: rgba(255, 255, 255, 0.8);
+         background: rgba(0, 0, 0, 0.36);
+         z-index: 11;
+         font-size: 15px;
+         display: inline-block;
+         transition: all 0.35s;
+         &:hover{
+            color: $white;
+            background: $theme-color;
+         }
+      }
+      .video-link{
+         position: absolute;
+         top: 15px;
+         right: 15px;
+         width: 32px;
+         height: 32px;
+         border-radius: 50%;
+         line-height: 33px;
+         text-align: center;
+         color: rgba(255, 255, 255, 0.8);
+         background: rgba(0, 0, 0, 0.36);
+         z-index: 11;
+         font-size: 15px;
+         transition: all 0.35s;
+         &:hover{
+            color: $white;
+            background: $theme-color;
+         }
+      }
+      .link-overlay{
+         display: inline-block;
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         z-index: 1;
+      }
+      .funded{
+         width: 80px;
+         height: 80px;
+         position: absolute;
+         bottom: -40px;
+         left: 50%;
+         margin-left: -40px;
+         z-index: 11;
+         background: rgba(255, 255, 255, 0.92);
+         @include border-radius(50%);
+         .progress{
+            margin-bottom: 0;
+         }
+         span{
+            font-size: 18px;
+            font-weight: 600;
+            font-family: $headings-font-family;
+            color: $theme-color;
+         }
+      }
+   }
+   .campaign-content{
+      position: relative;
+      padding: 55px 30px 20px;
+      background: $white;
+      @include media-breakpoint-down(lg){
+         padding-left: 25px;
+         padding-right: 25px;
+      }
+      .content-raised{
+         .raised{
+            color: #1db3e7;
+            font-size: 20px;
+            font-weight: 500;
+         }
+         .goal{
+            color: $theme-color;
+            font-size: 20px;
+            font-weight: 500;
+         }
+      }
+      .days{
+         padding-left: 10px;
+      }
+      .content-action{
+         margin: 15px 0;
+      }
+   }
+   .campaign-categories{
+      display: inline-block;
+      background: $theme-color;
+      color: #fff;
+      padding: 0 15px;
+      line-height: 25px;
+      a{
+         text-transform: uppercase;
+         letter-spacing: 2px;
+         font-size: 11px;
+         color: #fff; 
+      }
+   }
+   .camapign-time{
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 500;
+      color: $body-color;
+      margin-left: 8px;
+      i{
+         margin-right: 5px;
+         color: $theme-color-three;
+      }
+   }
+   .title {
+      font-size: 22px;
+      line-height: 34px;
+      margin: 12px 0 15px;
+   }
+   .campaign-raised {
+      font-size: 14px;
+      font-weight: 500;
+      color: $body-color;
+      margin-bottom: 2px;
+   }
+   .progress{
+      height: 10px;
+      .progress-bar {
+         background: $theme-color-second;
+         .percentage{
+            @include transform(none);
+            background: transparent;
+            padding: 0;
+            top: -25px;
+            color: $body-color;
+            font-size: 14px;
+            font-weight: 500;
+            &:after{
+               content: none;
+            }
+         }
+      }
+      b{
+         font-weight: 500;
+      }
+   }
+   .campaign-goal {
+      font-weight: 700;
+      margin-top: 10px;
+      .goal{
+         color: $theme-color-three;
+      }
+      .value-goal{
+         color: $theme-color;
+      }
+   }
+   &.campaign-block-1{
+      .campaign-image{
+         position: relative;
+         &:before{
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            background: $theme-color-three;
+            opacity: 0;
+            -webkit-transition: all 0.35s;
+            transition: all 0.35s;
+         }
+      }
+      .campaign-content {
+         padding: 35px 35px;
+         border: 1px solid #E9E9EE;
+         border-top: 0;
+         background: #fff;
+      }
+      &:hover{
+         .campaign-image:before{
+            opacity: 0.2;
+         }
+         .campaign-content{
+            box-shadow: 0px 15px 35px 0 rgba(27, 31, 46, 0.06);
+         }
+      }
+   }
+   &.campaign-block-2{
+      margin-bottom: 30px;
+      .campaign-block-inner{
+         position: relative;
+      }
+      .campaign-image{
+         position: relative;
+         &:before{
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            height: 100%; 
+            background: -webkit-gradient(linear,left bottom,left top,from(#1b1f2e),to(rgba(27,31,46,0)));
+            background: linear-gradient(0deg,#1b1f2e 0%,rgba(27,31,46,0) 100%);
+            background: -ms-linear-gradient(0deg,#1b1f2e 0%,rgba(27,31,46,0) 100%);
+            -webkit-transition: all 0.35s;
+            transition: all 0.35s;
+         }
+      }
+      .campaign-content{
+         padding: 35px 30px;
+          border-top: 0;
+          background: transparent;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          z-index: 11;
+          @include transition(all 0.35s);
+      }
+      .camapign-time{
+         color: #fff;
+         i{
+            color: #fff;
+         }
+      }
+      .title {
+         a{
+            color: $white;
+         }
+         @include media-breakpoint-down(xs){
+            margin: 5px 0;
+            font-size: 18px;
+            line-height: 28px;
+         }
+      }
+      .campaign-raised {
+         color: #fff;
+      }
+      .progress{
+         .progress-bar {
+            .percentage{
+               color: $white;
+            }
+         }
+      }
+      &:hover{
+         box-shadow: 10px 18px 20px 0 rgba($black, 0.03);
+         .campaign-content {
+            background: #fff;
+         }
+         .campaign-meta, .campaign-raised, .camapign-time, 
+         .progress .progress-bar .percentage{
+            color: #838694;
+         }
+         .title a {
+            color: $theme-color-three;
+         }
+      }
+   }
+}
+.campains-style-grid{
+   .owl-carousel .owl-dots{
+      margin-top: 30px;
+      @include media-breakpoint-down(sm){
+         margin-top: 10px;
+      }
+   }
+}
+
+.path-user{
+   .campaign-block-1{
+      .campaign-content{
+         padding: 30px 20px;
+         .campaign-categories{
+            padding: 0 10px;
+            a{
+               letter-spacing: 0;
+            }
+         }
+         .title{
+            font-size: 17px;
+            line-height: 26px;
+         }
+         .camapign-time{
+            .time-remaining-name{
+               display: none;
+            }
+         }
+      }
+   }
+}
+
+.campaign-tabs{
+   @media (max-width: 575px){
+      padding-top: 70px;
+   }
+   .nav-tabs {
+      border: 0;
+      > li {
+         margin-top: -72px;
+         @include media-breakpoint-down(md){
+            margin-top: -60px;
+         }
+         @include media-breakpoint-down(sm){
+            margin-top: -52px;
+         }
+         @media (max-width: 575px){
+            margin-top: 0px;
+         }
+         > a{  
+            background: $theme-color;
+            color: $white;
+            height: 72px;
+            margin-right: 10px;
+            padding: 15px 60px;
+            line-height: 40px;
+            font-size: 20px;
+            font-weight: 500;
+            display: inline-block;
+            @include media-breakpoint-down(md){
+               padding: 10px 30px;
+               height: auto;
+               font-size: 16px;
+            }
+            @include media-breakpoint-down(sm){
+               padding: 5px 15px;
+               font-size: 15px;
+               margin-bottom: 5px;
+            }
+            &.active{
+               background: $white;
+               color: $theme-color-three;
+               @include media-breakpoint-down(sm){
+                  box-shadow: 0 0 1px 0 #E9E9EE inset;
+               }
+            }
+         }
+      }
+   }
+   .tab-content{
+      padding: 60px 0;
+      @include media-breakpoint-down(sm){
+         padding: 40px 0;
+      }
+   }
+   #campaign-tab-description{
+      max-width: 1000px;
+   }
+}
+
+.campaign_update_wrapper{
+   padding-left: 10px;
+   padding-top: 30px;
+   .campaign-crowdfunding-update{
+      border-left: 3px solid #e7e7e7;
+      padding-left: 20px;
+   }
+   .field--name-field-campaign-update{
+      max-width: 980px;
+      > .field__item:not(:last-child){
+         padding-bottom: 50px;
+      }
+      .paragraph--type--project-update{
+         position: relative;
+         padding-left: 15px;
+         &:after{
+            content: '';
+            position: absolute;
+            top: 6px;
+            left: -32px;
+            height: 22px;
+            width: 22px;
+            border-radius: 50%;
+            background: #e7e7e7;
+            display: block;
+         }
+         .field--name-field-update-date{
+            font-size: 16px;
+            font-weight: 500;
+            color: $theme-color-three;
+            margin-top: -28px;
+         }
+         .field--name-field-update-title{
+            margin: 6px 0;
+            color: $theme-color-three;
+            font-size: 18px;
+            font-weight: 600;
+         }
+      }
+   }
+   
+}
+
+.body-page.page-product-campaign{
+   .gav-help-region{
+      background: #F7F7F9;
+   }
+   .breadcrumb-content-inner{
+      position: relative;
+      &:after{
+         content: '';
+         height: 55px;
+         background: #F7F7F9;
+         position: absolute;
+         top: 100%;
+         left: 0;
+         width: 100%;
+         z-index: 1;
+      }
+   }
+}
+
+.campaign-single{
+   &.campaign-block {
+      margin-bottom: 0px;
+      .campaign-content{
+         padding: 0;
+      }
+   }
+   .campaign-thumbnail{
+      margin-bottom: 30px;
+   }
+   .funded-content{
+      margin-bottom: 30px;
+      .column{
+         > *{
+            background: $white;
+            padding: 30px;
+            display: block;
+            text-align: center;
+            color: $body-color;
+            font-size: 16px;
+            margin-bottom: 30px;
+            >span, > strong{
+               display: block;
+               font-size: 24px!important;
+               line-height: 30px!important;
+               font-weight: 400!important;
+               color: $theme-color!important;
+            }
+         }
+         @media (max-width: 500px){
+            -webkit-box-flex: 0;
+          -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+          max-width: 100%;
+         }
+      }
+   }
+   .text-raised{
+      position: absolute;
+      top: -20px;
+      color: $body-color;
+      font-size: 14px;
+      font-weight: 500;
+      left: 0;
+   }
+   .btn-donation-now{
+      margin-top: 30px;
+      margin-bottom: 60px;
+   }
+   .campaign-content-top{
+      padding: 60px 0 120px;
+      background: #F7F7F9;
+      @include media-breakpoint-down(md){
+         padding: 25px 0 70px; 
+      }
+      @include media-breakpoint-down(sm){
+         .campaign-single-summary{
+            margin-top: 30px;
+         }
+      }
+      @media (max-width: 575px){
+         padding-bottom: 0;
+      }
+   }
+   .campaign-content-inner{
+      background: $white;
+      position: relative;
+      &:after, &:before{
+         content: "";
+         position: absolute;
+         width: 100vw;
+         height: 100%;
+         background: $white;
+         top: 0;
+         display: block;
+      }
+      &:after{
+         right: 100%;
+      }
+      &:before{
+         left: 100%;
+      }
+   }
+   #popup-add-to-cart{ 
+      .modal-body{
+         padding: 30px;
+         .expired{
+            padding-top: 50px;
+            font-size: 24px;
+         }
+      }
+      fieldset{
+         margin-top: 15px;
+         &.fieldgroup{
+            .fieldset-wrapper > div{
+               display: flex;
+               flex-wrap: wrap;
+               .form-item{
+                  max-width: 50%;
+                  flex: 0 0 50%;
+                  @media(max-width: 600px){
+                     max-width: 100%;
+                     flex: 0 0 100%; 
+                  }
+               }
+            }
+         }
+      }
+      .form-item{
+         margin-bottom: 4px;
+         position: relative;
+         input[type=radio]{
+            @include opacity(0);
+            &:hover{
+               cursor: pointer;
+            }
+            &:checked ~ label {
+               color: $theme-color;
+               &:before{
+                  border-color: $theme-color;
+               }
+            }
+         }
+         .ajax-progress{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            z-index: 111; 
+         }
+         label{
+            float: left;
+            &.option{
+               position: relative;
+               margin-right: 10px;
+               text-transform: capitalize;
+               font-size: 15px;
+               line-height: 20px;
+               padding-left: 26px;
+               @include transition(all 0.35s);
+               &:hover{
+                  cursor: pointer;
+               }
+               &:after{
+                  content: "";
+                  background: $white;
+                  position: absolute;
+                  left: 3px;
+                  top: 4px;
+                  @include size(12px, 12px);
+                  @include border-radius(50%);
+               }
+               &:before{
+                  content: "";
+                  position: absolute;
+                  left: 0;
+                  top: 1px;
+                  @include size(18px, 18px);
+                  @include border-radius(50%);
+                  border: 3px solid $border-color;
+                  @include transition(all 0.35s);
+               }
+            }
+         }
+      }
+      .form-actions{
+         width: 100%;
+         .button--add-to-cart{
+            padding: 10px 25px;
+         }
+      }
+      .funded.campaign-block{
+         float: left;
+         width: 100%;
+         display: block;
+         margin: 10px 0;
+         padding: 0 0 15px;
+      }
+      .add-to-cart-content-inner{
+         .field--name-price{
+            > div{
+               display: inline-block;
+               font-weight: 500;
+            }
+            .field__label{
+               position: relative;
+               &:after{
+                  content: ": ";
+               }
+            }
+            .field__item{
+               color: $theme-color;
+            }
+         }
+         legend{
+            line-height: 1;
+            padding-bottom: 5px;
+            span.fieldset-legend{
+               font-weight: 500;
+               text-transform: uppercase;
+               font-size: 16px;
+            }
+         }
+      }
+   }
+   
+}
+
+.related-campaigns{
+   .campaign-block{
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid $border-color;
+      
+      .campaign-content{
+         padding: 0;
+      }
+      .content-action{
+         display: none;
+      }
+      .content-raised{
+         display: none;
+      }
+      &:last-child{
+         border-bottom: none;
+         margin-bottom: 0;
+      }
+   }
+}
+
+//cart
+.gva-cart-region {
+   margin-top: -5px;
+   .cart-block--summary__icon {
+      display: inline-block;
+   }
+   .cart-block--summary__count {
+    
+   }
+  .cart-block--contents {
+      padding: 20px 20px 10px;
+      border-top: 2px solid $theme-color;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      background: $white;
+      width: 380px;
+      right: 0;
+      .cart-block--contents__items{
+         overflow: hidden;
+         td{
+            vertical-align: middle;
+         }
+      }
+      .cart-block--contents__links{
+         font-weight: 600;
+         color: $theme-color;
+      }
+   }
+}
+
+.cart-form{
+   table{
+      thead{
+         @media(max-width: 550px){
+            display: none;
+         }
+      }
+      tr{
+         @media(max-width: 550px){
+            border-bottom: 1px solid $border-color;
+         }
+         td{
+            @media(max-width: 550px){
+               width: 100%;
+               display: block;
+               text-align: center;
+               padding: 5px 15px;
+               border: none;
+            }
+            &.views-field-edit-quantity{
+               text-align: center;
+               input{
+                  text-align: center;
+               }
+            }
+            &.views-field-remove-button{
+               text-align: center;
+               input{
+                  background: none;
+                  color: $theme-color;
+                  padding: 5px;
+               }
+            }
+         }
+      }
+   }
+}
+
+.layout-checkout-form{
+   margin: 30px 0 60px;
+   fieldset{
+      legend{
+         color: $black;
+         font-size: 18px;
+         font-weight: 500;
+         text-transform: uppercase;
+         border-bottom: 1px solid $border-color;
+         margin-bottom: 20px;
+      }
+   }
+   .checkout-pane-payment-information{
+      div[class*='form-item']{
+         &:not(.js-form-type-radio):not(.js-form-type-checkbox){
+            margin-bottom: 20px;
+            width: 100%;
+            float: left;
+            display: block;
+            label{
+               display: block;
+               width: 100%;
+               float: left;
+               font-weight: 500;
+               color: $black;
+               font-size: 15px;
+               margin-bottom: 2px;
+            }
+            input, select{
+               width: 100%;
+               float: left;
+               min-height: 50px;
+            }
+         }
+         &.js-form-type-radio{
+            line-height: 1;
+            margin-bottom: 5px;
+         }
+      }
+      div[id*='edit-payment-information-payment-method']{
+         margin-bottom: 15px;
+         legend{
+            margin-bottom: 10px;
+         }
+         .form-item{
+            margin-bottom: 10px;
+            label{
+               color: $black;
+            }
+         }
+      }
+   }
+   .credit-card-form{
+      .form-item{
+         width: auto!important;
+         float: left;
+         margin-bottom: 5px;
+         margin-right: 15px;
+         input, select{
+            margin-top: 0;
+            line-height: 25px;
+         }
+      }
+      .form-item-payment-information-add-payment-method-payment-details-number{
+         max-width: 200px;
+      }
+      .credit-card-form__divider{
+         margin: 36px 0 0;
+      }
+      .credit-card-form__expiration{
+         display: inline-block;
+         float: left;
+      }
+   }
+   .form-item-payment-information-add-payment-method-billing-information-copy-to-address-book{
+      float: left;
+      width: 100%;
+      margin-bottom: 10px;
+   }
+   .layout-region-checkout-secondary{
+      h3{
+         text-transform: uppercase;
+         font-weight: 600;
+         font-size: 18px;
+      }
+      .order-total-line{
+         .order-total-line-label{
+            color: $black;
+         }
+      }
+   }
+}
+
+.profile-form,.commerce-payment-method-add-form{
+   div[class*='form-item']{
+      &:not(.js-form-type-radio):not(.js-form-type-checkbox){
+         margin-bottom: 10px;
+         width: 100%;
+         float: left;
+         display: block;
+         label{
+            display: block;
+            width: 100%;
+            float: left;
+         } 
+         input, select{
+            width: 100%;
+            float: left;
+         }
+      }
+      &.js-form-type-radio{
+         line-height: 1;
+         margin-bottom: 5px;
+      }
+   }
+   .credit-card-form{
+      .form-item{
+         width: auto!important;
+         float: left;
+         margin-bottom: 5px;
+         margin-right: 15px;
+         input, select{
+            margin-top: 0;
+            line-height: 25px;
+         }
+      }
+      .form-item-payment-information-add-payment-method-payment-details-number{
+         max-width: 200px;
+      }
+      .credit-card-form__expiration{
+         display: inline-block;
+         float: left;
+      }
+   }
+}
+ 
+.views-profiles{
+   .views-col{
+      margin-top: 15px;
+      padding-bottom: 15px;
+      position: relative;
+      &:after{
+         content: '';
+         position: absolute;
+         left: 15px;
+         right: 15px;
+         bottom: 0;
+         z-index: 1;
+         border-bottom: 1px solid $border-color;
+      }
+   }
+}
+
+.path-user{
+   .customer-information{
+      float: left;
+      width: 100%;
+      border-bottom: 1px solid $border-color;
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      > div{
+         float: left;
+         &.field--name-mail{
+            width: 33%;
+            @include media-breakpoint-down(sm){
+               width: 100%;
+            }
+         }
+         &.customer-billing{
+            width: 67%;
+            @include media-breakpoint-down(sm){
+               width: 100%;
+            }
+         }
+         .field__label{
+            width: 100%;
+            float: left;
+            font-weight: 600;
+            font-family: $headings-font-family;
+         }
+         .field__item{
+            float: left;
+            width: 100%;
+         }
+         &.customer-billing{
+            .address{
+               margin: 0;
+               span{
+                  margin-right: 6px;
+                  padding-right: 8px;
+                  position: relative;
+                  display: inline-block;
+                  &:after{
+                     content: '';
+                     @include size(1px, 15px);
+                     position: absolute;
+                     top: 6px;
+                     right: 0;
+                     z-index: 1;
+                     background: rgba(0, 0, 0, 0.2);
+                  }
+                  &:last-child{
+                     &:after{
+                        display: none;
+                     }
+                  }
+               }
+               br{
+                  display: none;
+               }
+            }
+         }
+      }
+   }
+   .order-information{
+      float: left;
+      width: 100%;
+      > .field{
+         float: left;
+         margin-right: 20px;
+         width: 30%;
+         @media(max-width: 300px){
+            width: 100%;
+         }
+         .field__label{
+            font-weight: 600;
+            color: $black;
+         }
+         &.field--name-order-items, &.field--name-total-price{ 
+            width: 100%;
+            margin-top: 20px;
+            margin-right: 0;
+         }
+      }
+   }
+}
+
+.cart--cart-block .cart-block--contents__links a{
+   color: $black!important;
+   &:hover{
+      color: $theme-color!important;
+   }
+}

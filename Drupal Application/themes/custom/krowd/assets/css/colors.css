@@ -1,0 +1,16 @@
+/****/
+:root {
+  --krowd-font-sans-serif: "Poppins", sans-serif;
+  --krowd-heading-font-family: 'Poppins', sans-serif;
+  --krowd-theme-color:             #674df0;
+  --krowd-theme-color-second:      #30f0b6;
+  --krowd-theme-color-three:       #1b1f2e;
+  --krowd-link-color:              #070346;
+  --krowd-hover-color:             #fd6151;
+  --krowd-body-color:              #777777;
+  --krowd-heading-color:           #070346;
+  --krowd-footer-bg-color:           #f7f7f7;
+  --krowd-footer-color:              #777;
+  --krowd-footer-color-link:         #777;
+  --krowd-footer-color-link-hover:   #fd6151;
+}

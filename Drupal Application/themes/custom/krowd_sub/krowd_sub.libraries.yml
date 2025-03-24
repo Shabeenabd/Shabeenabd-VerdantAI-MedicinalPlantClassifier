@@ -1,0 +1,9 @@
+global-styling:
+  version: VERSION
+  header: true
+  css:
+    theme:
+      css/colors.css: {}
+      css/style.css: {}
+  js:
+    js/main.js: {}

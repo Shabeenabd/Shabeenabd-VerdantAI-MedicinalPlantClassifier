@@ -1,0 +1,6 @@
+type: module
+name : Gavias Krowd Themer
+description : Gavias Krowd Themer
+package: gavias
+core_version_requirement: ^8 || ^9 || ^10
+project: 'gavias_hook_themer'

@@ -1,0 +1,26 @@
+@import "vars/_theme_variables";
+
+@import "bootstrap/mixins";
+@import "mixins/mixins";
+@import "mixins/template";
+
+:root {
+
+  --#{$variable-prefix}font-sans-serif: #{inspect($font-family-sans-serif)};
+  --#{$variable-prefix}heading-font-family: 'Poppins', sans-serif;
+  
+  --#{$variable-prefix}theme-color:             #674df0;
+  --#{$variable-prefix}theme-color-second:      #30f0b6;
+  --#{$variable-prefix}theme-color-three:       #1b1f2e;
+
+  --#{$variable-prefix}link-color:              #070346;
+  --#{$variable-prefix}hover-color:             #fd6151;
+  --#{$variable-prefix}body-color:              #777777;
+  --#{$variable-prefix}heading-color:           #070346;
+
+  --#{$variable-prefix}footer-bg-color:           #f7f7f7;
+  --#{$variable-prefix}footer-color:              #777;
+  --#{$variable-prefix}footer-color-link:         #777;
+  --#{$variable-prefix}footer-color-link-hover:   #fd6151;
+
+}

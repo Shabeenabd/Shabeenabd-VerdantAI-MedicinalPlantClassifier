@@ -1,0 +1,16 @@
+<article class="testimonial-node-v1">      
+   <div class="testimonial-content clearfix">
+      <div class="testimonial-left">
+         <h3 class="testimonial-name">{{ fields.field_testimonial_name.content }}{{' .'|t}}</h3>
+         <div class="testimonial-quote">{{ fields.body.content|striptags|trim }}</div>
+      </div>
+      <div class="testimonial-right">
+         <div class="testimonial-image">
+            <div class="bg-testimonial">
+            {{ fields.field_testimonial_image.content }} 
+            </div>
+            <a class="icon-quote" href="#"><i class="fas fa-quote-left"></i></a>
+         </div>    
+      </div>
+   </div>
+</article>

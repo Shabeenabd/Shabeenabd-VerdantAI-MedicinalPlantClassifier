@@ -1,0 +1,35 @@
+/****/
+:root {
+	--krowd-font-sans-serif: "Poppins", sans-serif;
+	--krowd-heading-font-family: 'Poppins', sans-serif;
+
+	--krowd-theme-color:             #674df0;
+	--krowd-theme-color-second:      #30f0b6;
+   --krowd-theme-color-three:       #1b1f2d;
+
+	--body-color:                    #838694;
+	--body-link-color:               #1b1f2e;
+	--body-link-color-hover:         #674df4;
+
+	--topbar-bg-color:               #674df3;
+	--topbar-color:                  #fffffd;
+	--topbar-link-color:             #fffffe;
+	--topbar-link-color-hover:       #30f0b7;
+
+	--header-bg-color:               #ffffff;
+
+	--menu-link-color:					#838692;
+	--menu-link-color-hover:			#1b1f2f;
+	--submenu-bg-color:					#fffffb;
+	--submenu-color:						#838695;
+	--submenu-link-color:				#1b1f2c;
+	--submenu-link-color-hover:		#674df2;
+
+	--footer-bg-color:					#1b1f2b;
+	--footer-color:						#8d91a2;
+	--footer-link-color:					#8d91a1;
+	--footer-link-color-hover:			#30f0b5;
+
+}
+
+

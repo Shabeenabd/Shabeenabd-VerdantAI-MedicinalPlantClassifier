@@ -1,0 +1,207 @@
+.event-list-item{
+  .event-date{
+    display: inline-block;
+    background: #28292B;
+    color: $white;
+    @include border-radius(3px);
+    padding: 0 15px;
+    font-size: 13px;
+    line-height: 30px;
+    line-height: 24px;
+  }
+  .event-title{
+    margin-top: 5px;
+    a{
+      font-size: 20px;
+      color: $theme-color;
+      font-weight: 400;
+    }
+  }
+  .event-body{
+    color: #232526;
+  }
+}
+
+.event-block{
+  .event-image{
+    position: relative;
+    overflow: hidden;
+    .date{
+      position: absolute;
+      bottom: 10px;
+      left: 30px;
+      overflow: hidden;
+      padding: 5px 10px;
+      letter-spacing: 2px;
+      font-weight: 400;
+      font-size: 13px;
+      text-transform: uppercase;
+      background: $theme-color;
+      color: $white;
+      @include box-shadow(0px 4px 26px 3px rgba(0, 0, 0, 0.1));
+      text-align: center;
+      .day{
+        margin-right: 10px;
+      }
+      .icon{
+        margin-right: 5px;
+      }
+    }
+  }
+  .event-content{
+    background: $white;
+    padding: 35px;
+    border: 1px solid $border-color;
+    border-top: 0;
+    min-height: 185px;
+    .event-info{
+      .title{
+        font-size: 22px;
+        line-height: 34px;
+        display: block;
+        margin-bottom: 20px;
+        font-weight: 600; 
+      }
+      .event-meta{
+        font-size: 13px;
+        color: $body-color;
+      }
+      .body{
+        margin-top: 10px;
+        line-height: 28px; 
+      }
+    }
+  }
+}
+
+.event-block-2{
+  padding-bottom: 35px;
+  margin-bottom: 35px;
+  border-bottom: 1px solid $border-color;
+  @include clearfix();
+  .content-inner{
+    padding-left: 350px;
+    position: relative;
+    z-index: 9;
+    @include media-breakpoint-down(sm){
+      padding-left: 0;
+    }
+    .event-content-inner{
+      position: relative;
+    }
+  }
+  .post-title{
+    font-size: 18px;
+  }
+  .event-image{
+    width: 320px;
+    float: left;
+    position: relative;
+    z-index: 1;
+    @include media-breakpoint-down(sm){
+      width: 100%;
+      float: none;
+      margin-bottom: 20px;
+    }
+    .event-date{
+      @include box-shadow(0px 4px 26px 3px rgba(0, 0, 0, 0.1));
+      @include size(75px, 75px);
+      float: left;
+      text-align: center;
+      line-height: 1.1;
+      padding-top: 10px;
+      position: absolute;
+      background: $white;
+      right: 15px;
+      top: 15px;  
+      .date{
+        font-size: 30px;
+        font-weight: 600;
+        color: $theme-color;
+        display: block;
+      }
+      .month{
+        font-size: 11px;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: $black;
+        font-family: $headings-font-family;
+      }
+    }
+  }
+  .event-meta{
+    font-size: 15px;
+    margin-top: 5px;
+    line-height: 22px;
+  }
+  .event-line{
+    @include size(50px, 2px);
+    background: $theme-color;
+    margin: 15px 0 15px;
+  }
+  @include media-breakpoint-down(sm){
+    .post-title{
+      margin-top: 0;
+      font-size: 18px;
+    }
+  } 
+}
+
+.event-block-list{
+   .event-date{
+      @include size(110px, auto);
+      float: left;
+      background: $theme-color;
+      color: $white;
+      padding: 12px 10px;
+      span{
+         display: block;
+         &.day{
+            font-size: 30px;
+            font-family: $headings-font-family;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            line-height: 1;
+            margin-bottom: 3px;
+            padding-bottom: 3px;
+         }
+      }
+   }
+   .event-title{
+      a{
+         font-weight: 600;
+         font-family: $headings-font-family;
+         font-size: 14px;
+         display: inline-block;
+         line-height: 24px;
+      }
+   }
+   .event-address{
+      font-size: 14px;
+      i{
+         font-size: 16px;
+         color: $theme-color;
+      }
+   }
+   .event-content{
+      padding-left: 125px;
+   }
+}
+
+.event-full{
+  margin-bottom: 30px;
+  .event-info{
+    background: #f5f5f5;
+    padding: 20px;
+    font-size: 16px;
+    font-family: $font-family-base;
+    .date, .address{
+      > *{
+        float: left;
+      }
+      i{
+        margin-right: 10px;
+        margin-top: 6px;
+      }
+    }
+  }
+}

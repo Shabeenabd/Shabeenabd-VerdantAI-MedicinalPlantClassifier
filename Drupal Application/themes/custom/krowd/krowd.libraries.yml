@@ -1,0 +1,77 @@
+global-styling:
+  version: VERSION
+  header: true
+  css:
+    theme:
+      //fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap: { type: external }
+      //fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&display=swap: { type: external }
+      assets/css/sliderlayer.css: {}
+      assets/css/font-awesome/css/all.min.css: {}
+      assets/css/icon.css: {}
+      assets/css/flaticon.css: {}
+      assets/css/zmdi/css/material-design-iconic-font.css: {}
+      assets/css/animate.css: {}
+      assets/vendor/owl-carousel/assets/owl.carousel.min.css: {}
+      assets/vendor/owl-carousel/assets/owl.theme.default.min.css: {}
+      assets/vendor/prettyphoto/css/prettyPhoto.css: {}
+      assets/vendor/ytplayer/css/jquery.mb.YTPlayer.min.css: {}
+      assets/vendor/magnific/magnific-popup.css: {}
+      assets/vendor/popup-gallery/css/lightgallery.min.css: {}
+      assets/vendor/popup-gallery/css/lg-transitions.min.css: {}
+      assets/css/colors.css: {}
+      assets/css/bootstrap.css: {}
+      assets/css/template.css: {}
+  js:
+    assets/vendor/jquery-migrate.min.js: {}
+    assets/js/bootstrap.js: {}
+    assets/js/imagesloader.min.js: {}
+    assets/vendor/jquery.easing.js: {}
+    assets/vendor/jquery.appear.js: {}
+    assets/vendor/jquery.easypiechart.min.js: {}
+    assets/vendor/owl-carousel/owl.carousel.min.js: {}
+    assets/vendor/waypoint.js: {}
+    assets/vendor/count-to.js: {}
+    assets/vendor/masonry.pkgd.min.js: {}
+    assets/vendor/isotope.pkgd.min.js: {}
+    assets/vendor/aos.js: {}
+    assets/vendor/jpreloader.min.js: {}
+    assets/vendor/prettyphoto/js/jquery.prettyPhoto.js: {}
+    assets/vendor/ytplayer/js/jquery.mb.YTPlayer.min.js: {}
+    assets/vendor/jquery.typer/src/jquery.typer.js: {}
+    assets/vendor/perfect-scrollbar.jquery.min.js: {}
+    assets/vendor/magnific/jquery.magnific-popup.min.js: {}
+    assets/vendor/popup-gallery/js/lightgallery.min.js: {}
+    assets/js/main.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+
+
+gavias-charityplus-admin:
+  version: VERSION
+  css: 
+    theme: 
+      assets/css/theme-settings.css: {}
+      assets/vendor/codemirror/lib/codemirror.css: {}
+      assets/vendor/codemirror/addon/hint/show-hint.css: {}
+  js:
+      assets/vendor/jquery-migrate.min.js: {}
+      assets/vendor/codemirror/lib/codemirror.js: {cope: footer}
+      assets/vendor/codemirror/mode/css/css.js: {cope: footer}
+      assets/js/admin.js: {}
+
+maintenance_page:
+  version: VERSION
+  css:
+    theme:
+      assets/css/maintenance-page.css: {}
+
+views-infinite-scroll:
+  version: VERSION
+  js:
+    assets/js/override/infinite-scroll.js : {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupal.debounce 

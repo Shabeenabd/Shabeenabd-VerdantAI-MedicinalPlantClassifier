@@ -1,0 +1,9 @@
+/***********************************************/
+.gsc-progress{
+   margin-bottom: 30px;
+   &.noborder-box{
+     .progress-label{
+       color: $white;
+     }
+   }
+}

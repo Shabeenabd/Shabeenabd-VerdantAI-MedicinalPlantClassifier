@@ -1,0 +1,112 @@
+/********************** Call to action **************************/
+.gsc-call-to-action{
+  &.button-right{
+    position: relative;
+    .title{
+      font-size: 38px;
+      line-height: 1.4;
+      margin: 5px 0!important;
+      @include media-breakpoint-down(xs){
+        font-size: 32px;
+        line-height: 50px;
+      }
+    }
+    .content{
+      padding-right: 250px;
+      @media(max-width: 640px){
+        padding-right: 0;
+      }
+      p{
+        margin: 0;
+      }
+    }
+    .button-action{
+      position: absolute;
+      top: 50%;
+      right: 0;
+      @include translateY(-50%);
+      z-index: 1;
+      @media(max-width: 640px){
+        position: relative;
+        top: 0;
+        @include translateY(0);
+        margin-top: 15px;
+      }
+    }
+  }
+  &.button-bottom{
+    padding: 30px 0;
+    
+    &.v1{
+      background: $theme-color;
+      padding: 50px 30px;
+      .content-inner{
+        max-width: 470px;
+        margin: 0 auto;
+        @include media-breakpoint-down(sm){
+          max-width: 715px; 
+        }
+      }
+      .title{
+        font-size: 30px;
+        line-height: 1.5;
+        margin-bottom: 30px;
+        margin-top: 0;
+      }
+      &.text-light .content .desc *{
+        color: #d1c8fe;
+      }
+      .button-action{
+        margin-top: 40px;
+      }
+    }
+    &.v2{
+      min-height: 410px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      .content-inner{
+        max-width: 335px;
+        margin: 0 auto;
+      }
+      .title{
+        font-size: 38px;
+        line-height: 1.4;
+        margin: 0 0 30px;
+        @include media-breakpoint-down(xs){
+          font-size: 32px;
+          line-height: 50px;
+        }
+      }
+      .desc{
+        font-size: 18px;
+        line-height: 2;
+        margin-bottom: 40px;
+        color: $theme-color-three;
+      }
+    }
+    &.text-light{
+      .title{
+        &:after{
+          background: $white;
+        }
+      }
+    }
+  }
+  
+  &.text-light{
+    .content{
+      color: $white;
+      .title{
+        color: $white;
+      }
+      .desc *{
+        color: #d1c8fe;
+      }
+    }
+    .subtitle{
+      color: $white;
+    }
+  }
+}  

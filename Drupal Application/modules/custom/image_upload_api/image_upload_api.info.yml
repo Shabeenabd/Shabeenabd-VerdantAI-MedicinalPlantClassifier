@@ -1,0 +1,10 @@
+name: 'Image Upload API'
+type: module
+description: 'A module to upload an image, send it to an API, and display the response with the image.'
+core_version_requirement: ^10
+package: Custom
+dependencies:
+  - drupal:file
+libraries:
+  - image_upload_api/image_upload_api_styles
+  - image_upload_api/scroll_to_result

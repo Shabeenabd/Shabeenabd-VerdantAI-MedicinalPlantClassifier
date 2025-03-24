@@ -1,0 +1,49 @@
+.gsc-video-box{
+    position: relative;
+    .gsc-video-link{
+        background: $theme-color; 
+        color: $white;
+        text-align: center;
+        font-size: 24px;
+        line-height: 120px;
+        @include size(120px, 120px);
+        display: inline-block;
+        @include media-breakpoint-down(xs){
+            @include size(90px, 90px); 
+            line-height: 90px;
+        }
+        i {
+            @include scale(1);
+            @include transition(all 0.35s);
+        }
+        &:hover i {
+            @include scale(1.5);
+        }    
+    }
+    &.bg-image{
+        max-width: 700px;
+        margin: 0 auto;
+        .image{
+            position: relative;
+            &:after{
+                content: "";
+                position: absolute;
+                background: $theme-color-second;
+                top: 0;
+                left: 0;
+                @include size(73px,73px); 
+                @include media-breakpoint-down(xs){
+                    @include size(40px,40px); 
+                }
+            }
+        }
+        .gsc-video-link{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+            line-height: 134px;
+            @include size(138px, 134px);
+        }
+    }
+}

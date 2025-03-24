@@ -1,0 +1,66 @@
+/******************** Block for drupal ***********************/
+.gsc-block-drupal{
+  margin-bottom: 35px;
+  &.hidden-title-off{
+    .block-title{
+      display: none!important;
+    }
+  }
+  &.title-align-center{
+    .block-title{
+      text-align: center;
+    }
+  }
+  &.title-align-left{
+    .block-title{
+      text-align: left;
+    }
+  }
+  &.title-align-right{
+    .block-title{
+      text-align: right;
+    }
+  }
+  &.noborder-box{
+    div{
+      color: $white;
+    }
+    .block-inner{
+      .block-title{
+         color: $white;
+      }
+      .block-content{
+        *, div{
+          color: $white;
+          &:after, &:before{
+            color: rgba(255, 255, 255, 0.2);
+          }
+        }
+      }
+    }
+  }
+  &.remove-margin-on{
+      margin-bottom: 0!important;
+     .block{
+        margin-bottom: 0!important;
+     }
+  }
+  &.text-light{
+    div{
+      color: $white;
+    }
+    .block-inner{
+      .block-title{
+        color: $white;
+      }
+      .block-content{
+        *, div{
+          color: $white;
+          &:after, &:before{
+            color: rgba(255, 255, 255, 0.2);
+          }
+        }
+      }
+    }
+  }
+}

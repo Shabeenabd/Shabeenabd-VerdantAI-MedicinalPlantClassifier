@@ -1,0 +1,168 @@
+{#
+/**
+ * @file
+ *
+ * Default product template.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapper.
+ * - product: The rendered product fields.
+ *   Use 'product' to print them all, or print a subset such as
+ *   'product.title'. Use the following code to exclude the
+ *   printing of a given field:
+ *   @code
+ *   {{ product|without('title') }}
+ *   @endcode
+ * - product_entity: The product entity.
+ * - product_url: The product URL.
+ *
+ * @ingroup themeable
+ */
+#}
+
+<article{{ attributes}}>
+  	<div class="campaign-block campaign-single">
+
+	 	<div class="campaign-content-top">
+	 		<div class="container">
+				<div class="row">
+				  	<div class="col-xl-7 col-lg-6 col-md-6 col-sm-12">
+					 	<div class="image campaign-images campaign-thumbnail lightGallery">
+							{% if product.field_campaign_images %}
+						  		{{ product.field_campaign_images }} 
+							{% endif %}
+							{% if video_link %}
+							 	<a class="video-link popup-video" href="{{ video_link }}"><i class="fas fa-camera"></i></a>
+							{% endif %}
+					 	</div>
+
+						 	<div class="single-short-description">
+								<h2>{{ 'Short Story'|t }}</h2>
+								<div itemprop="description">
+									{{ product.body['#object'].body.summary }}
+								</div>
+						 	</div>
+				  	</div>
+				  	<div class="col-xl-5 col-lg-6 col-md-6 col-sm-12">
+					 	<div class="campaign-single-summary">
+							<div class="campaign-categories">{{ product.field_campaign_category }}</div>
+								{{ title_prefix }}
+						  			<h1{{ title_attributes.addClass('post-title') }}>{{ product.title }}</h1>
+								{{ title_suffix }} 
+							<div class="funded-content">
+							  	<div class="row">
+									<div class="col-xl-4 col-lg-4 col-sm-4 col-xs-4 column">
+										<div class="content-raised"><span class="raised">{{raised}}</span> {{'Raised of'|t}} </div>
+									</div>
+								 	<div class="col-xl-4 col-lg-4 col-sm-4 col-xs-4 column">
+									 	<div class="content-raised"><span class="goal">{{ product.field_campaign_goal }}</span> {{'Goal'|t}}</div>
+								 	</div>
+								 	<div class="col-xl-4 col-lg-4 col-sm-4 col-xs-4 column">
+										<span class="days"><strong class="text-theme">{{ days_left }}</strong> {{'Days left'|t}} </span>
+								 	</div>
+							  	</div>
+							</div>
+							<div class="campaign-funded">
+							  	<div class="content-funded-inner">
+								 	<div class="funded">
+										<div class="progress">
+										  	<div class="progress-bar" data-progress-animation="{{funded}}%">
+												<span class="text-raised">{{'Raised:'|t}}</span>
+												<span class="percentage"><span></span><b>{{ funded }}%</b></span>
+											</div>
+										</div>
+										<div class="campaign-goal inline margin-top-0">
+											<span class="label-goal text-black">{{'Goal:'|t}}</span>
+											<span class="value-goal text-theme">{{product.field_campaign_goal}}</span>
+										</div>
+								 	</div>
+							  	</div>   
+							</div>
+						 	<a class="btn btn-theme-second btn-donation-now" href="#" data-toggle="modal" data-target="#popup-add-to-cart"><span>{{'Donation now'|t}}</span></a>
+					 	</div>   
+					 
+				  	</div>
+				</div>
+			</div>	
+		</div>
+  
+		 <div class="campaign-content-inner">  
+		 	<div class="container">
+		 		<div class="col-12">
+					<div class="campaign-tabs">
+					  	<ul class="campaign-tabs-menu nav nav-tabs">
+						 	<li class="campaign-current description_tab">
+								<a class="active" data-toggle="tab" href="#campaign-tab-description">{{'Story'|t}}</a>
+						 	</li>
+						 	<li class=" update_tab">
+								<a data-toggle="tab" href="#campaign-tab-update">{{'Updates'|t}}</a>
+						 	</li>
+						 	{% if product.field_campaign_comment %}
+							 	<li class=" reviews_tab">
+									<a data-toggle="tab" href="#campaign-tab-reviews">{{'Comments'|t}}</a>
+							 	</li>
+							{% endif %} 	
+					  	</ul>
+
+					  	<div class="campaign-tab tab-content">
+						 	<div id="campaign-tab-description" class="campaign-tab-content tab-pane fade show active">
+							  	<div class="tab-description tab-campaign-story-left">
+								 	{{product.body}}
+							  	</div>
+						 	</div>
+						 	<div id="campaign-tab-update" class="campaign-tab-content tab-pane fade show">
+								<div class="campaign_update_wrapper">
+								  	<div class="campaign-crowdfunding-update">
+								  		{{product.field_campaign_update}}
+								  	</div>
+								</div>
+						 	</div>
+
+							 {% if product.field_campaign_comment %}
+								<div id="campaign-tab-reviews" class="campaign-tab-content tab-pane fade show">
+									  <div id="node-single-comment">
+										 {{ product.field_campaign_comment }}
+									  </div>
+								</div>
+							{% endif %}
+
+					  </div>
+					</div>
+				</div>
+			</div>		       
+			<div id="popup-add-to-cart" class="modal fade" role="dialog">
+				 <div class="modal-dialog">
+					<!-- Modal content-->
+					<div class="modal-content">
+					  <div class="modal-header clearfix">
+						 <button type="button" class="close" data-dismiss="modal">&times;</button>
+					  </div>
+					  <div class="modal-body clearfix">
+						 
+						 <div class="campaign-block funded">
+							<div class="progress">
+							  	<div class="progress-bar" data-progress-animation="{{funded}}%">
+									<span class="text-raised">{{'Raised:'|t}}</span>
+									<span class="percentage"><span></span><b>{{ funded }}%</b></span>
+								</div>
+							</div>
+						 </div>
+
+						 <div class="add-to-cart-content-inner">
+							{{product.variation_price|raw}}
+							{{product.variations|raw}}
+						 </div>  
+					  </div>
+					</div>
+				 </div>
+			  </div>
+			 
+			<div{{ content_attributes.addClass('node__content hidden', 'clearfix') }}>
+			  {{- product|without('field_campaign_goal','field_campaign_start', 'field_campaign_time', 'taxonomy_catalog', 'field_campaign_images', 'comment', 'field_campaign_video', 'variation_price', 'variations' ,'field_campaign_category' , 'field_campaign_featured') -}}
+			</div>
+		 
+			<div class="post-categories hidden">{{ product.field_campaign_category }}</div>
+
+		</div>
+	</div>
+</article>

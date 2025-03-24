@@ -1,0 +1,203 @@
+ /**************** Team ************************/
+.gsc-our-team{
+    
+    .team-name{
+       font-size: 18px;
+       position: relative;
+       font-weight: 800;
+       margin: 0;
+    }
+    .team-position{
+       text-transform: capitalize;
+       font-weight: 400;
+       font-size: 14px;
+    }  
+    .team-info{
+       margin: 15px 0;
+    }  
+
+    &.team-horizontal{
+       margin-top: 50px;
+       .team-header{
+        position: relative;
+        overflow: hidden;
+        img{
+          @include transition(all 3s);
+          display: inline-block;
+        }
+        .box-hover{
+          @include opacity(0);
+          @include scale(0.8);
+          position: absolute;
+          top: 0;
+          left: 0;
+          @include transition(all 0.35s);
+          @include size(100%, 100%);
+          background: rgba(0, 0, 0, 0.6);
+          .content-inner{
+            position: absolute;
+            top: 50%;
+            margin-top: -15px;
+            left: 0;
+            width: 100%;
+            height: auto;
+            padding: 0 20px;
+          }
+        }
+        .social-list{
+          a{
+            background: none;
+            color: $white!important;
+            @include transition(all 0.35s);
+            margin-right: 20px;
+            display: inline-block;
+            font-size: 16px;
+            &:last-child{
+              margin-right: 0;
+            }
+            &:hover{
+              color: $theme-color!important;
+            }
+          }
+        }
+       }
+       .team-name{
+          font-size: 14px;
+          margin: 0 0 12px 0;
+          text-transform: uppercase;
+          padding: 0 0 12px;
+          position: relative;
+          font-weight: 800;
+          &:after{
+             bottom: 0;
+             left: 0;
+             content: "";
+             background: $theme-color;
+             @include size(45px, 1px);
+             position: absolute;
+          } 
+       }
+       &:hover{
+        .box-hover{
+          @include opacity(1);
+          @include scale(1);
+        }
+        .team-header{
+          img{
+            @include scale(1.2);
+          }
+        }
+      } 
+    }
+    &.team-vertical{  //vertical
+      margin-bottom: 30px;
+      position: relative;
+      .team-header{
+        overflow: hidden;
+        position: relative;
+        img {
+          @include transition(all 3s);
+          display: inline-block;  
+        }
+      }
+      .social-list{
+      }
+      .social-icon {
+        @include transition(all 0.35s);
+        @include size(41px,41px);
+        line-height: 41px;
+        text-align: center;   
+        display: inline-block;
+        font-size: 12px; 
+        color: #fff;
+        &.fa-facebook-square {
+          background: #1696d2;
+          &:hover {
+            background: darken(#1696d2, 10%);
+          }
+        } 
+        &.fa-twitter {
+          background: #2059b7;
+          &:hover {
+            background: darken(#2059b7, 10%);
+          }
+        } 
+        &.fa-pinterest-p {
+          background: #de4220;
+          &:hover {
+            background: darken(#de4220, 10%);
+          }
+        } 
+        &.fa-google-plus-g {
+          background: #59a1b9;
+          &:hover {
+            background: darken(#59a1b9, 10%);
+          }
+        }         
+      }
+      .team-name{
+        font-size: 24px;
+        font-weight: 800;        
+      }
+      .team-position{
+        font-size: 18px;
+        margin-bottom: 0;
+      }
+      .info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 20px 0;
+      }
+      .signature {
+        font-family: 'Sacramento', ;
+        color: #eeeae6;
+        font-size: 40px;
+      }
+      .team-content{
+        color: $white;
+      }
+      .box-hover{
+        @include opacity(0);
+        @include scale(0.8);
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include transition(all 0.35s);
+        @include size(100%, 100%);
+        background: rgba(0, 0, 0, 0.6);
+        .team-content{
+          position: absolute;
+          left: 0;
+          width: 100%;
+          height: auto;
+          padding: 0 20px;
+          top: 50%;
+          @include translateY(-50%);
+        }
+      }
+      .team-body{
+        bottom: 0;
+        left: 0;
+        @include transition(all 0.35s);
+        .content-hover{
+          @include opacity(0);
+        }
+      
+      }
+      &:hover{
+        .box-hover{
+          @include opacity(1);
+          @include scale(1);
+        }
+        .signature {
+          color: $theme-color;
+        }
+      }  
+    }
+    &.team-circle{  //vertical
+     .team-header, .box-hover{
+      @include border-radius(50%);
+     } 
+    }
+ }

@@ -1,0 +1,58 @@
+{#
+/**
+ * @file
+ *
+ * Default product template.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapper.
+ * - product: The rendered product fields.
+ *   Use 'product' to print them all, or print a subset such as
+ *   'product.title'. Use the following code to exclude the
+ *   printing of a given field:
+ *   @code
+ *   {{ product|without('title') }}
+ *   @endcode
+ * - product_entity: The product entity.
+ * - product_url: The product URL.
+ *
+ * @ingroup themeable
+ */
+#}
+<div class="campaign-block campaign-block-1">      
+   <div class="campaign-block-inner">
+      <div class="image lightGallery">
+        <div class="campaign-image">
+        {{ product.field_campaign_images }}
+        </div>
+        {% if video_link %}
+          <a class="video-link popup-video" href="{{ video_link }}"><i class="fas fa-camera"></i></a>
+        {% endif %}
+        <a href="{{ product_url }}" class="link-overlay"></a> 
+      </div>
+      <div class="campaign-content">
+        <div class="campaign-meta clearfix">
+          <div class="campaign-categories">{{ product.field_campaign_category }}</div>
+          <div class="camapign-time">
+            <i class="far fa-clock"></i><span class="time-remaining-desc">{{ days_left }}</span><span class="time-remaining-name"> {{'Days left'|t}} </span>
+          </div>
+        </div>
+        <div class="campaign-title clearfix">
+          <h4 class="title"><a href="{{ product_url }}" rel="bookmark">{{ title }}</a> </h4> 
+        </div> 
+        <div class="campaign-raised clearfix">
+          <span class="raised">{{raised}}</span> {{'Raised of'|t}} 
+        </div>
+        <div class="progress clearfix">
+           <div class="progress-bar" data-progress-animation="{{funded}}%">
+              <span class="percentage"><span></span><b>{{ funded }}%</b></span>
+           </div>
+        </div>
+        <div class="campaign-goal">
+          <span class="goal">{{'Goal'|t}}</span>
+          <span class="value-goal">{{ product.field_campaign_goal }}</span>
+        </div>
+      </div>
+   </div>
+</div>
+        

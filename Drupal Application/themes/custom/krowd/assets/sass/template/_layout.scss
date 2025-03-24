@@ -1,0 +1,141 @@
+html{
+  overflow-x: hidden;
+}
+body{
+  overflow-x: hidden;
+  font-size: 16px;
+  div.body-page{
+    background: $white;
+  }
+  &.boxed{ 
+    max-width: 1440px;  
+    margin: 0 auto;
+    @include box-shadow(0px 5px 5px rgba(0, 0, 0, 0.15));
+    background-color: #efefef;
+  }
+  &.logged-in{
+    &.toolbar-horizontal{
+      .header-v1{
+        top: 39px;
+        @media(max-width: 1024px){
+          top: 0;
+        }
+      }
+    }
+  }
+}
+
+.area{
+  &.slideshow_content{
+    .block{
+      margin-bottom: 0;
+    }
+  }
+}
+
+.area-panel{
+  padding: 30px 0;
+}
+
+.promotion{
+  padding: 0;
+  margin-bottom: 0;
+}
+
+#page-main-content{
+  min-height: 360px;
+  @include media-breakpoint-down(sm){
+    min-height: 100px;
+  }
+}
+
+.main-menu{
+  .area-main-menu{
+    .area-inner{
+      .block{
+        margin-bottom: 0;
+      }
+    }  
+  }
+}  
+
+.sidebar{
+  position: relative;
+}
+
+body{
+  &.hidden-footer{
+    .footer-center{
+      display: none!important;
+    }
+  }
+}
+
+.footer{
+  font-size: 16px;
+  color: var(--footer-color);
+  background: url('#{$base-theme-image-path}/bg-footer.png') no-repeat top left var(--footer-bg-color);
+  background-attachment: scroll;
+  background-size: cover;
+  line-height: 32px;
+  a{
+    color: var(--footer-link-color);
+    &:hover, &:focus {
+      color: var(--footer-link-color-hover);
+    }
+  }
+  ul.menu, ul.contact-info{
+    margin: 0;
+    padding: 0;
+    > li{
+      display: block;
+      width: 100%;
+      > a {
+        @include transition(all 0.35s); 
+        &:hover{
+          color: var(--footer-link-color-hover);
+        }
+      }
+    }
+  }
+  .footer-center{
+    padding: 120px 0 90px;
+    @include media-breakpoint-down(md){
+      padding: 70px 0 40px;
+    }
+    @include media-breakpoint-down(md){
+      .about-info{
+        margin-bottom: 45px;
+      }
+      .block .block-title{
+        margin-bottom: 20px; 
+      }
+    }
+  }
+  .block {  
+    .block-title{    
+      color: $white;
+      font-size: 20px;
+      margin-bottom: 35px;
+      margin-top: 5px;
+    }   
+  }
+}
+.footer-top {
+  .block{
+    margin-bottom: 0;
+  }
+}
+
+.copyright{
+  .copyright-inner{ 
+    border-top: 1px solid #2D313E; 
+    padding: 30px 0; 
+    a {
+       color: var(--footer-link-color);
+    }
+    .block {
+      margin-bottom: 0;
+    }
+  }
+}

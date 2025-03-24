@@ -1,0 +1,79 @@
+.gsc-box-color{
+  position: relative;
+  margin-bottom: 30px;
+  .box-content{
+    text-align: center;
+    background: $theme-color;
+    padding: 30px 30px 50px;
+    .box-title{
+      font-size: 32px;
+      text-transform: none;
+      font-weight: 700;
+      margin: 20px 0 25px;
+      position: relative;
+      padding-bottom: 20px;
+      &:after{
+        content: "";
+        bottom: 0;
+        left: 50%;
+        margin-left: -22.5px;
+        width: 45px;
+        border-bottom: 1px dashed $white;
+        position: absolute;
+        z-index: 1;
+      }
+    }
+    .icon{
+      font-size: 66px;
+      @include size(150px, 150px);
+      @include border-radius(50%);
+      color: $theme-color;
+      background: $white;
+      display: inline-block;
+      line-height: 150px;
+      @include box-shadow(3px 0 6px rgba(0, 0, 0, 0.2));
+    }
+    .content{
+      font-size: 16px;
+      line-height: 25px;
+    }
+    .link{
+      font-weight: 400;
+      @include transition(all 0.35s);
+      font-size: 20px;
+      position: absolute;
+      bottom: -22px;
+      left: 50%;
+      @include translateX(-50%);
+      z-index: 9;
+      @include border-radius(5px);
+      padding: 0 25px;
+      line-height: 50px;
+      overflow: hidden;
+      @include box-shadow(0px 3px 0px 0px rgba(0, 0, 0, 0.2));
+      .text{
+        position: relative;
+        z-index: 9;
+      }
+      .background{
+        @include size(100%, 100%);
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.1);
+        position: absolute;
+        z-index: 1;
+        @include transition(all 0.35s);
+      }
+      &:hover{
+        .background{
+          background: rgba(0, 0, 0, 0.5);
+        }
+      }
+    }
+  }
+  &.text-white{
+    .box-title, .content, .link{
+      color: $white;
+    }
+  }
+}
