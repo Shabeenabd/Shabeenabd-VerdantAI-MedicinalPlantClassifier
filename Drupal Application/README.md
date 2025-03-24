@@ -1,6 +1,6 @@
 # Ayurmithram 
 ### Drupal web Home page
-![alt text](Images/Screenshot_from_2024-12-27_15-07-53.png)
+![Home Page](Images/Screenshot_from_2024-12-27_15-07-53.png)
 ![alt text](Images/Screenshot_from_2024-12-27_15-08-07.png)
 ### Drupal Plant Scan page
 ![alt text](Images/Screenshot_from_2024-12-27_15-10-31.png)
