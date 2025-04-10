@@ -77,8 +77,8 @@ To get started with this project, follow the instructions below to set up the en
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://gitlab.com/icfoss/Malayalam-Computing/medicinal-plant-identification-and-information-retrieval-system.git
-cd medicinal-plant-identification-and-information-retrieval-system
+git clone https://github.com/Shabeenabd/VerdantAI-MedicinalPlantClassifier.git
+cd VerdantAI-MedicinalPlantClassifier
 ```
 ### Step 2: Set Up Python Environment
 1. Create a virtual environment:
@@ -162,7 +162,7 @@ Model Codes/
 
 # list all the classes and get an overview of the dataset.
 python list_classes.py
-#run python script for building the model.
+# run python script for building the model.
 python model_build.py
 ```
 #### 2. Setup Fastapi backend
